@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 
 using namespace std;
 
@@ -38,15 +39,13 @@ void bubbleSort(const char* array[], int size)
 }
 
 int main(int argc, const char * argv[]) {
-  const char* sfeld[] = {
-    "eins", "eins1", "eins2", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn"
-  };
-  int size = 13;
+  argv[0] = "";
+  assert(argc > 2);
 
-  bubbleSort(sfeld, size);
+  bubbleSort(argv, argc);
 
-  for(int i = 0; i < size; i++)
-    cout << sfeld[i] << endl;
+  for(int i = 1; i < argc; i++)
+    cout << argv[i] << endl;
 
   return 0;
 }
