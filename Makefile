@@ -1,8 +1,9 @@
-CC=g++
+CC=gcc
 TARGET=main
+OPTIONS=-W
 
-all: main.cpp
-	$(CC) main.cpp -o $(TARGET)
+all: main.c
+	$(CC) main.c -o $(TARGET) $(OPTIONS)
 
 run:
 	./$(TARGET) eins eins1 eins2 eins zwei drei vier fünf sechs sieben acht neun zehn
