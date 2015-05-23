@@ -1,6 +1,6 @@
 CC=gcc
 TARGET=main
-OPTIONS=-W
+OPTIONS=-Wall
 
 all: main.c
 	$(CC) main.c -o $(TARGET) $(OPTIONS)

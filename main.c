@@ -41,12 +41,14 @@ void bubbleSort(const char* array[], int size)
 
 int main(int argc, const char * argv[])
 {
-  argv[0] = "";
   assert(argc > 2);
+  // remove first element (name of script) from array
+  argv++;
+  argc--;
 
   bubbleSort(argv, argc);
 
-  for(int i = 1; i < argc; i++)
+  for(int i = 0; i < argc; i++)
     printf("%s \n", argv[i]);
 
   return 0;
